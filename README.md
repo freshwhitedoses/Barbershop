@@ -1,1 +1,1 @@
-Barbershob - Spring MVC/RestApi application 
+Barbershop - Spring MVC/RestApi application 
