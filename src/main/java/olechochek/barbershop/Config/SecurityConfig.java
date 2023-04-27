@@ -40,9 +40,9 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManager(HttpSecurity http)
             throws Exception {
         return http.getSharedObject(AuthenticationManagerBuilder.class)
-                .userDetailsService(//customUserDetailsService)
-                .passwordEncoder(encoder())
-                .and()
+                //.userDetailsService()
+                        //customUserDetailsService.passwordEncoder(encoder())
+                //.and()
                 .build();
     }
     @Bean

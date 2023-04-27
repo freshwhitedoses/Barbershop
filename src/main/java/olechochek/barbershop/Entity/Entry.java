@@ -18,7 +18,7 @@ public class Entry {
     @Column(name = "office")
     private String office;
     @Column(name = "barber")
-    private String Barber;
+    private String barber;
     @Column(name = "price")
     private String price;
     @Column(name = "date")
@@ -26,7 +26,7 @@ public class Entry {
 
     public Entry(String office, String barber, String price, Date date) {
         this.office = office;
-        Barber = barber;
+        this.barber = barber;
         this.price = price;
         this.date = date;
     }
