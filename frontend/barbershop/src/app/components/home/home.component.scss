@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Jost;
+  src: url("/assets/fonts/Jost-VariableFont_wght.ttf") format('truetype');
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  height: 100%;
+  padding-top: 70px;
+  p{
+    margin: 0 0  0 150px;
+    font-family: Jost;
+    color: rgba(255, 94, 3, 1);
+    font-weight: 600;
+    font-size: 140px;
+  }
+  .image{
+    height: 978px;
+    align-items: end;
+  }
+}
