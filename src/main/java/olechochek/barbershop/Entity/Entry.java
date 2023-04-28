@@ -1,9 +1,9 @@
 package olechochek.barbershop.Entity;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -23,12 +23,15 @@ public class Entry {
     private String price;
     @Column(name = "date")
     private Date date;
+    @Column(name = "phone")
+    private String phone;
 
-    public Entry(String office, String barber, String price, Date date) {
+    public Entry(String office, String barber, String price, Date date, String phone) {
         this.office = office;
         this.barber = barber;
         this.price = price;
         this.date = date;
+        this.phone=phone;
     }
 
     public Entry() {

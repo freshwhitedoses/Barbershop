@@ -1,13 +1,12 @@
 package olechochek.barbershop.Entity;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import olechochek.barbershop.Entity.Enums.Role;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
 
@@ -16,7 +15,6 @@ import java.util.Collections;
 @Getter
 @Setter
 public class User implements UserDetails {
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
