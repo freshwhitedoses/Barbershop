@@ -1,0 +1,20 @@
+<p>YOUR OFFICES HERE</p>
+<div class="offices">
+  <app-office-info *ngFor="let office of officeService.offices; let i = index" [office]="office"></app-office-info>
+</div>
+<div *ngIf="current_user?.role=='ADMIN'" class="add_office">
+  <button  class="add_new_office" (click)="details=!details">Add new office</button>
+    <form *ngIf="details" class="form_for_adding_office" [formGroup]="form_for_adding_office" (ngSubmit)="submit()">
+      <select formControlName="type" class="select" name="office_type">
+        <option *ngFor = "let item of type" value="{{item.name}}">{{item.name}}</option>
+      </select>
+      <input type="text" placeholder="Office's image" class="image" formControlName="photo">
+      <input type="text" placeholder="Office's price" class="price" formControlName="price">
+      <select formControlName="experience" class="select" placeholder="Barber's experience" name="barber_experience">
+        <option value="" hidden>Select barber's experience</option>
+        <option *ngFor = "let item of experience" value="{{item.name}}">{{item.name}}</option>
+      </select>
+      <input type="text" placeholder="Office's description" class="description" formControlName="description">
+      <button type="submit" class="button_for_add">Add barber</button>
+    </form>
+</div>

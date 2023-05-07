@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Jost;
+  src: url("/assets/fonts/Jost-VariableFont_wght.ttf") format('truetype');
+}
+.user_entry{
+  margin-bottom: 50px;
+  .entry_info{
+    margin-left: 150px;
+    height: 300px;
+    width: 400px;
+    border: 2px solid white;
+    p{
+      margin: 0 10px 10px;
+      font-family: Jost;
+      font-size: 40px;
+      color: rgba(255, 94, 3, 1);
+      span{
+        font-weight: normal;
+        color: white;
+      }
+    }
+  }
+  .no_entry_user{
+    font-family: Jost;
+    margin-top: 60px;
+    font-size: 40px;
+    margin-left: 150px;
+    color: rgba(255, 94, 3, 1);
+  }
+}

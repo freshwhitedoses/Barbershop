@@ -1,0 +1,9 @@
+<p class="auth">AUTHENTICATION</p>
+<form class="registration_form" [formGroup]="auth_form" (ngSubmit)="submit()">
+  <input class="input" type="text" placeholder="Your Phone" formControlName="phone">
+  <input class="input" type="password" placeholder="Password" formControlName="password">
+  <button type="submit" class="button">Log In</button>
+  <div routerLink="/registration" class="redirection">
+    <p class="redirect" >Don't have an account yet? Register</p>
+  </div>
+</form>

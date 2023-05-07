@@ -1,0 +1,115 @@
+@font-face {
+  font-family: Jost;
+  src: url("/assets/fonts/Jost-VariableFont_wght.ttf") format('truetype');
+}
+.auth{
+  font-family: Jost;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 45px;
+  color: rgba(255, 94, 3, 1);
+  margin: 150px auto;
+  text-align: center;
+}
+form{
+  border-radius: 25px;
+  background-color: rgba(255, 94, 3, 1) ;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: -30px;
+  width: 666px;
+  height: 670px;
+  margin-left: auto;
+  margin-right: auto;
+  .for_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    .registration{
+      font-family: Jost;
+      font-style: normal;
+      font-size: 40px;
+      line-height: 45px;
+      color: white;
+    }
+    .auth {
+      font-family: Jost;
+      color: black;
+      font-style: normal;
+      font-size: 40px;
+      line-height: 45px;
+      list-style: none;
+      text-decoration: none;
+    }
+  }
+  .input{
+    width: 80%;
+    font-family: Jost;
+    font-size: 40px;
+    margin: 30px auto 0;
+    background: transparent;
+    border: none;
+    border-bottom: black solid 3px;
+    outline: none;
+    color: black;
+  }
+  .input::placeholder{
+    color: black;
+  }
+  .button{
+    margin: 70px auto 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 569px;
+    height: 70px;
+    background: black;
+    border-radius: 10px;
+    border-color: black;
+    font-family: Jost;
+    font-size: 40px;
+    color: white;
+  }
+
+}
+
+/*
+input{
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  font-family: Jost;
+  font-size: 30px;
+  margin-top: 30px;
+  color: white;
+  background-color:black;
+  width: 550px;
+  height: 80px;
+  border-radius: 40px;
+  text-decoration-color: white;
+  border-style: solid;
+  border-color: black;
+}
+button{
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  font-family: Jost;
+  font-size: 30px;
+  margin-top: 30px;
+  color: white;
+  background-color:black;
+  width: 550px;
+  height: 80px;
+  border-radius: 40px;
+  text-decoration-color: white;
+  border-style: solid;
+  border-color: black;
+}
+
+ */

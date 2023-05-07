@@ -1,0 +1,10 @@
+<div class="about_office" *ngIf="office">
+  <p class="office_info">{{office.type}}</p>
+  <p class="office_info">{{office.experience}}</p>
+  <img class="photo_office" [src]="office.photo">
+  <p class="office_info">{{office.price}}</p>
+  <button class="show_descr" (click)="details=!details">{{details ? 'Hide' : 'Show'}} description</button>
+  <div *ngIf="details">
+    <p class="description">{{office.description}}</p>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Jost;
+  src: url("/Jost-VariableFont_wght.ttf") format('truetype');
+}
+.about_barber{
+  margin-top: 100px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 94, 3, 1);
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  .photo_barber{
+    margin: 20px auto;
+    text-align: center;
+    height: 310px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 10%;
+  }
+  .barber_info{
+    text-align: center;
+    margin: 0 0 5px;
+    justify-items: start;
+    font-family: Jost;
+    font-size: 40px;
+    color: rgba(255, 94, 3, 1);
+    span{
+      font-weight: normal;
+      color: white;
+    }
+  }
+  .show_descr{
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 94, 3, 1);
+    text-align: center;
+    font-family: Jost;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(255, 94, 3, 1);
+    margin: 0 auto 20px;
+  }
+  .description{
+    font-family: Jost;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+}
+
+

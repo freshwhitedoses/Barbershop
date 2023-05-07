@@ -1,0 +1,12 @@
+<p class="titleO">Your account</p>
+<div class="about_user" *ngIf="user_">
+  <p class="basic_date">Name: <span>{{user_.name}}</span></p>
+  <p class="basic_date">Surname: <span>{{user_.surname}}</span></p>
+  <p class="basic_date">Email: <span>{{user_.email}}</span></p>
+  <p class="basic_date">Phone: <span>{{user_.phone}}</span></p>
+  <button routerLink="" class="logout" (click)="logout()">Log Out</button>
+</div>
+<p class="title1">Your entries</p>
+<div class="entries">
+<app-user-entry *ngFor="let entry of entryService.entries" [entry]="entry"></app-user-entry>
+</div>

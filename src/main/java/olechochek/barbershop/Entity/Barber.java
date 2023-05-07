@@ -20,6 +20,7 @@ public class Barber{
     @Column(name = "surname")
     private String surname;
     @Column(name = "experience")
+    @Enumerated(EnumType.STRING)
     private Experience experience;
     @Column(name = "description")
     private String description;

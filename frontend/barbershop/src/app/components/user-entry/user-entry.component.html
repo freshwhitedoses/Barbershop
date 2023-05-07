@@ -1,0 +1,11 @@
+<div class="user_entry">
+  <div class="entry_info">
+    <p>Office: <span class="about_office">{{entry.office}}</span></p>
+    <p>Barber: <span class="about_barber">{{entry.barber}}</span></p>
+    <p>Date: <span class="about_date">{{entry.date | date}}</span></p>
+    <p>Price: <span class="about_price">{{entry.price}}</span></p>
+  </div>
+  <div *ngIf="!entry.barber" class="no_entry">
+    <p class="no_entry_user">You don't have any active entries yet</p>
+  </div>
+</div>

@@ -24,13 +24,16 @@ public class Office {
     private Experience experience;
     @Column(name = "type")
     private Type type;
+    @Column(name="photo")
+    private String photo;
 
     public Office(String price, String description,
-                  Experience experience, Type type) {
+                  Experience experience, Type type, String  photo) {
         this.price = price;
         this.description = description;
         this.experience = experience;
         this.type = type;
+        this.photo = photo;
     }
 
     public Office() {

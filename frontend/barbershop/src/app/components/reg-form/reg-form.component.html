@@ -1,1 +1,9 @@
-<p>reg-form works!</p>
+<p class="auth">REGISTRATION</p>
+<form class="registration_form" [formGroup]="registration_form" (ngSubmit)="submit()">
+  <input class="input" type="text" placeholder="Your Name" formControlName="name">
+  <input class="input" type="text" placeholder="Your Surname" formControlName="surname">
+  <input class="input" type="text" placeholder="Your Phone" formControlName="phone">
+  <input class="input" type="email" placeholder="Your Email" formControlName="email">
+  <input class="input" type="password" placeholder="Password" formControlName="password">
+  <button type="submit" class="button">Create</button>
+</form>

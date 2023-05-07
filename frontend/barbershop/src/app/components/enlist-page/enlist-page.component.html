@@ -1,0 +1,22 @@
+<p>CHOOSE YOUR OFFICE AND BARBER HERE</p>
+<div class="add_entry">
+<form class="form_for_adding_entry" [formGroup]="form_for_adding_entry" (ngSubmit)="submit()">
+  <select formControlName="office" class="select" name="office">
+    <option value="" hidden>Select office</option>
+    <option *ngFor = "let item of type" value="{{item.name}}">{{item.name}}</option>
+  </select>
+  <select formControlName="barber" class="select" name="barber">
+    <option value="" hidden>Select barber</option>
+    <option *ngFor = "let barber of barberService.barbers" value="{{barber.name}}">{{barber.name}} {{barber.experience}}</option>
+  </select>
+  <select formControlName="day" class="select" name="day">
+    <option value="" hidden>Select day</option>
+    <option *ngFor = "let time of times; let i = index" value="{{i}}">{{time.date}}.05</option>
+  </select>
+  <select formControlName="time" class="select" name="time">
+    <option value="" hidden>Select time</option>
+    <option *ngFor = "let time of (times.at(form_for_adding_entry.value.day ?? 0)?.time ?? []); let i = index" value="{{time}}">{{time}}</option>
+  </select>
+  <button type="submit" class="button_for_add">Add entry</button>
+</form>
+</div>

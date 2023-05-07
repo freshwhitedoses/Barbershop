@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Jost;
+  src: url("/fonts/Jost-VariableFont_wght.ttf") format('truetype');
+}
+p{
+  font-size: 50px;
+  font-family: Jost;
+  margin: 150px auto 0;
+  color: rgba(255, 94, 3, 1);
+  font-weight: bolder;
+  text-align: center;
+}
+.add_entry{
+  margin-top: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  .form_for_adding_entry{
+    border: 1px solid rgba(255, 94, 3, 1);
+    border-radius: 20px;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto 0;
+    .select{
+      font-size: 30px;
+      height: 60px;
+      width: 600px;
+      background-color: rgba(255, 94, 3, 1);
+      font-family: Jost;
+      border: 1px solid rgba(255, 94, 3, 1);
+      border-radius: 10px;
+      margin: 40px auto 10px;
+      color: black;
+    }
+    .button_for_add{
+      margin: 20px auto;
+      text-align: center;
+      width: 200px;
+      height: 50px;
+      border: 1px solid rgba(255, 94, 3, 1);
+      border-radius: 10px;
+      background-color: rgba(255, 94, 3, 1);
+      font-family: Jost;
+      font-size: 30px;
+      font-weight: bolder;
+    }
+  }
+}

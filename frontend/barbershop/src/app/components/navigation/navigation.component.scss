@@ -1,8 +1,9 @@
 @font-face {
   font-family: Jost;
-  src: url("/fonts/Jost-VariableFont_wght.ttf") format('truetype');
+  src: url("fonts/Jost-VariableFont_wght.ttf") format('truetype');
 }
 .navigation{
+  margin: 0 auto;
   display: flex;
   align-content: center;
   top: 0;
@@ -11,24 +12,29 @@
   right: 0;
   height: 70px;
   background-color: rgba(255, 94, 3, 1);
-  margin: 0;
   padding: 0;
   justify-content: left;
   align-items: center;
   justify-items: center;
-  span{
-    background-color: rgba(255, 94, 3, 1);
-  }
-  a{
-    background-color:rgba(255, 94, 3, 1) ;
-    color: black;
-    margin-left: 30px;
-    list-style-type: none;
-    margin-right: 30px;
-    font-style: normal;
-    font-weight: 600;
-    font-family: Jost, sans-serif;
-    font-size: 35px;
+    a{
+      background-color:rgba(255, 94, 3, 1) ;
+      color: black;
+      margin-left: 30px;
+      list-style: none;
+      text-decoration: none;
+      margin-right: 30px;
+      font-style: normal;
+      font-weight: 600;
+      font-family: Jost, sans-serif;
+      font-size: 35px;
+    }
+  .for_img{
+    height: 52px;
+    width: 72px;
+    .image_account{
+      text-align: center;
+      height: 52px;
+    }
   }
   .first_link{
     margin-left: 150px;

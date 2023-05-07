@@ -28,6 +28,7 @@ class TestController {
     fun test() = ResponseEntity.internalServerError().body( TestEntity(huy = "Zalupe", zalupa = "Huy"))
 }
  */
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class UserController {
     private final UserService userService;
@@ -41,9 +42,9 @@ public class UserController {
     }
 
     @PostMapping("/registration")
-    public String  addUser(@RequestBody User newUser){
-        if(!userService.addUser(newUser)) return "User with this phone exist yet";
-        else return "ok";
+    public ResponseEntity<String> addUser(@RequestBody User newUser){
+        if(!userService.addUser(newUser)) return ResponseEntity.badRequest().body("User with this phone exist yet");
+        else return ResponseEntity.ok("ok");
     }
     @PostMapping("/login")
     public ResponseEntity<AuthResponseDTO> login(@RequestParam String phone, @RequestParam String password){
@@ -52,7 +53,6 @@ public class UserController {
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String token = jwtGenerator.generateToken(authentication);
         return new ResponseEntity<>(new AuthResponseDTO(token), HttpStatus.OK);
-        //return userService.isValidUser(phone,password);
     }
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/account")

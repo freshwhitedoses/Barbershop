@@ -1,0 +1,17 @@
+<p>YOUR BARBERS HERE</p>
+<div class="barbers">
+  <app-barber-info *ngFor="let barber of barberService.barbers; let i = index" [barber]="barber" ></app-barber-info>
+</div>
+<div *ngIf="current_user?.role=='ADMIN'" class="add_barber">
+  <button class="add_new_barber" (click)="details=!details">Add new barber</button>
+  <form *ngIf="details" class="form_for_adding_barber" [formGroup]="form_for_adding_barber" (ngSubmit)="submit()">
+    <input type="text" placeholder="Barber's name" class="name" formControlName="name">
+    <input type="text" placeholder="Barber's surname" class="surname" formControlName="surname">
+    <select formControlName="experience" class="select" placeholder="Barber's experience" name="barber_experience">
+      <option *ngFor = "let item of experience" value="{{item.name}}">{{item.name}}</option>
+    </select>
+    <input type="text" placeholder="Barber's image" class="image" formControlName="image">
+    <input type="text" placeholder="Barber's description" class="description" formControlName="description">
+    <button type="submit" class="button_for_add">Add barber</button>
+  </form>
+</div>

@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
@@ -18,9 +19,9 @@ public class OfficeController {
     private OfficeService officeService;
     @PostMapping("/add/office")
     @PreAuthorize("hasAnyAuthority('ADMIN')")
-    public ResponseEntity.BodyBuilder addBarber(Office office){
+    public ResponseEntity<Office> addOffices(@RequestBody Office office){
         officeService.addOffice(office);
-        return ResponseEntity.ok();
+        return ResponseEntity.ok().build();
     }
     @GetMapping("/offices")
     public ResponseEntity<List<Office>> getOffices(){
