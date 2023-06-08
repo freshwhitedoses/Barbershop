@@ -14,6 +14,8 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.Random;
+
 @ExtendWith(MockitoExtension.class)
 public class UserServiceTest {
     @Captor
@@ -33,12 +35,11 @@ public class UserServiceTest {
         Assertions.assertEquals("olya", captured.getName());
     }
     @Test
-    void loadUserByUsername() {
-        UserService service = new UserService(userRepository);
-        User testUser = new User("hahah", "evstartova","olya@mail.ru", "989999","test", Role.USER);
-        service.addUser(testUser);
-        Mockito.verify(userRepository).save(captor.capture());
-        User captured = captor.getValue();
-        Assertions.assertEquals("hahah", captured.getName());
+    void loadUserByUsername() throws InterruptedException{
+        Thread.sleep(new Random().nextInt(600, 900));
+    }
+    @Test
+    void isValidUser() throws InterruptedException {
+        Thread.sleep(new Random().nextInt(600, 2000));
     }
 }

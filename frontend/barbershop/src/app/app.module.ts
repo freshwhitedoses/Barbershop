@@ -18,6 +18,11 @@ import { EnlistPageComponent } from './components/enlist-page/enlist-page.compon
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
 import {InterceptorService} from "./services/interceptor.service";
 import { FilterPipe } from './pipes/filter.pipe';
+import { PricesComponent } from './components/prices/prices.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -33,13 +38,18 @@ import { FilterPipe } from './pipes/filter.pipe';
     BarberPageComponent,
     OfficePageComponent,
     EnlistPageComponent,
-    FilterPipe
+    FilterPipe,
+    PricesComponent,
+    ContactsComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatExpansionModule,
+        MatTableModule
     ],
   providers: [
     {

@@ -1,0 +1,26 @@
+<p>PRICES</p>
+<div style="padding: 2rem 2rem; width: 60%; margin: 5rem auto">
+  <table style="background-color: black; border: 1px solid rgba(255, 94, 3, 1)" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="office">
+      <th  style="font-size: 35px; color: rgba(255, 94, 3, 1); border: 1px solid rgba(255, 94, 3, 1)" mat-header-cell *matHeaderCellDef>Office</th>
+      <td style="font-size: 30px; color: rgba(255, 94, 3, 1); border-left: 1px solid rgba(255, 94, 3, 1)" mat-cell *matCellDef="let element"> {{element.office}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="type">
+      <th style="font-size: 35px; color: rgba(255, 94, 3, 1); border: 1px solid rgba(255, 94, 3, 1)" mat-header-cell *matHeaderCellDef>Type</th>
+      <td style="font-size: 30px; color: rgba(255, 94, 3, 1); " mat-cell *matCellDef="let element"> {{element.type}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="price">
+      <th style="font-size: 35px; color: rgba(255, 94, 3, 1); border: 1px solid rgba(255, 94, 3, 1)" mat-header-cell *matHeaderCellDef>Price</th>
+      <td style="font-size: 30px; color: rgba(255, 94, 3, 1)" mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+
+    <tr style=" color: rgba(255, 94, 3, 1); border: 1px solid rgba(255, 94, 3, 1)" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr  style=" color: rgba(255, 94, 3, 1); border: 1px solid rgba(255, 94, 3, 1)" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+</div>

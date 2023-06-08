@@ -1,0 +1,12 @@
+@font-face {
+  font-family: Jost;
+  src: url("/fonts/Jost-VariableFont_wght.ttf") format('truetype');
+}
+p{
+  font-size: 50px;
+  font-family: Jost;
+  margin: 150px auto 0;
+  color: rgba(255, 94, 3, 1);
+  font-weight: bolder;
+  text-align: center;
+}

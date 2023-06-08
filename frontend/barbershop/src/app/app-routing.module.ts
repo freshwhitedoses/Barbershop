@@ -8,6 +8,8 @@ import {BarberPageComponent} from "./components/barber-page/barber-page.componen
 import {OfficePageComponent} from "./components/office-page/office-page.component";
 import {EnlistPageComponent} from "./components/enlist-page/enlist-page.component";
 import {AuthGuardsService} from "./services/auth.guards.service";
+import {PricesComponent} from "./components/prices/prices.component";
+import {ContactsComponent} from "./components/contacts/contacts.component";
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path:'account',component:AccountComponent,canActivate:[AuthGuardsService]},
   {path:'barbers',component:BarberPageComponent},
   {path:'offices',component:OfficePageComponent},
-  {path:'enlist',component:EnlistPageComponent,canActivate:[AuthGuardsService]}
+  {path:'enlist',component:EnlistPageComponent,canActivate:[AuthGuardsService]},
+  {path:'prices',component:PricesComponent},
+  {path:'contacts',component:ContactsComponent}
 ];
 
 @NgModule({
