@@ -102,11 +102,6 @@ export class EnlistPageComponent implements OnInit{
    }).subscribe(value => {
       console.log(this.form_for_adding_entry.value);
       this.router.navigate(['/account']);
-        //this.index = this.tim.find(it=>it.date==this.temp_date)?.time
-          //.indexOf(this.form_for_adding_entry.value.time as string) as number;
-        //this.tim.find(it=>it.date==this.temp_date)?.time.slice(this.index,1)
-      //console.log(this.form_for_adding_entry.value.time as string)
-      //console.log(this.tim)
       }
       ,error=>{
      console.log(error)
