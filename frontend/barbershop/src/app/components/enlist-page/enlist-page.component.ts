@@ -91,7 +91,7 @@ export class EnlistPageComponent implements OnInit{
     {date: '15', time: ['11:00', '13:00', '15:00', '17:00']}]
   temp_date:string
   submit(){
-    this.temp_date = "2023-05-" + this.getDate(this.form_for_adding_entry.value.day as number) + 'T'
+    this.temp_date = "2023-12-" + this.getDate(this.form_for_adding_entry.value.day as number) + 'T'
       + (this.form_for_adding_entry.value.time as string) + ":00.000"
     this.entryService.addEntry({
       office: this.form_for_adding_entry.value.office as string,
